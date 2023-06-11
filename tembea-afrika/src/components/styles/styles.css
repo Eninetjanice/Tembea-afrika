@@ -1,0 +1,199 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 1.25rem;
+    cursor: pointer;
+}
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    height: 31.25rem;
+    background-image: url('../../assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 6.25rem 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+    .hero-section {
+        padding: 3.125rem 1.25rem;
+    }
+}
+
+.hero-section h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.cta-button {
+    font-size: 1.125rem;
+    padding: 0.625rem 1.25rem;
+    background-color: #ff9800;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Search and Filter section styles */
+.search-filter-section {
+    padding: 1.25rem;
+    background-color: #f9f9f9;
+}
+
+.search-filter-section input[type="text"] {
+    width: 100%;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-options button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 0.625rem;
+    cursor: pointer;
+}
+
+/* Featured Destinations section styles */
+.featured-destinations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+    .featured-destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.destination-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Interactive Map section styles */
+.interactive-map {
+    height: 25rem;
+    background-color: #f9f9f9;
+    margin: 1.25rem 0;
+}
+
+/* Blog section styles */
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+    .blog-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.article-thumbnail {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.article-thumbnail img {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333333;
+    padding: 1.25rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-info,
+.quick-links,
+.social-icons {
+    margin-bottom: 0.625rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    color: #333333;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    background-color: #ff9800;
+    color: #ffffff;
+}
