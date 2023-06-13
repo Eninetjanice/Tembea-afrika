@@ -1,0 +1,31 @@
+/* NavigationBar.css */
+
+.navigation-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 1.25rem;
+}
+
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-bar ul li {
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+.navigation-bar ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation-bar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation-bar ul li a:hover {
+  text-decoration: underline;
+}

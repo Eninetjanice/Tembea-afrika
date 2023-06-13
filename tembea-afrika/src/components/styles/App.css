@@ -1,0 +1,22 @@
+/* App.css */
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 0.625rem;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 0.625rem;
+}

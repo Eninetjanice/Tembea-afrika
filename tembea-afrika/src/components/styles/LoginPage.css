@@ -1,0 +1,37 @@
+/* LoginPage.css */
+
+.login-page {
+  padding: 1.25rem;
+}
+
+.login-form {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+}
+
+.login-form button {
+  background-color: #666;
+  color: #fff;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #333;
+}

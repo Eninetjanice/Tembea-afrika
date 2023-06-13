@@ -1,0 +1,55 @@
+/* communityPage.css */
+
+.community-page {
+  background-color: #f5f5f5;
+  padding: 1.25rem;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+.community-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.25rem;
+}
+
+.user-profiles,
+.discussion-forums,
+.photo-galleries,
+.blog-section,
+.review-system,
+.social-features,
+.events-meetups,
+.moderation-user-management {
+  background-color: #fff;
+  padding: 1.25rem;
+}
+
+.user-profiles h3,
+.discussion-forums h3,
+.photo-galleries h3,
+.blog-section h3,
+.review-system h3,
+.social-features h3,
+.events-meetups h3,
+.moderation-user-management h3 {
+  color: #333;
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.user-profiles h4,
+.discussion-forums h4,
+.photo-galleries h4,
+.blog-section h4,
+.review-system h4,
+.social-features h4,
+.events-meetups h4,
+.moderation-user-management h4 {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 0.3125rem;
+}
