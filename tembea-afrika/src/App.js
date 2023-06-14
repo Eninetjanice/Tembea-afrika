@@ -7,7 +7,7 @@ import FeaturedDestinations from './components/FeaturedDestinations';
 import InteractiveMap from './components/InteractiveMap';
 import BlogSection from './components/BlogSection';
 import Footer from './components/Footer';
-import Footer from '.components/footer';
+// import Footer from '.components/footer';
 import NavigationBar from './components/NavigationBar';
 import HomePage from './pages/HomePage';
 import DestinationPage from './components/DestinationPage';
