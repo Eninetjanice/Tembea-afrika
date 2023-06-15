@@ -1,7 +1,7 @@
 // components/FeaturedDestination.js
 
-import React, { useEffect, useState } from 'react';
-import api from '../api';
+import React, { useEffect, useState } from "react";
+import api from "../api/DestinationApi";
 
 const FeaturedDestination = () => {
   const [destinations, setDestinations] = useState([]);
@@ -16,7 +16,7 @@ const FeaturedDestination = () => {
         setDestinations(response.data);
         setIsLoading(false);
       } catch (error) {
-        setError('Failed to fetch featured destination');
+        setError("Failed to fetch featured destination");
         setIsLoading(false);
       }
     };
@@ -41,6 +41,6 @@ const FeaturedDestination = () => {
       {error && <p>{error}</p>}
     </div>
   );
-}
+};
 
 export default FeaturedDestination;
