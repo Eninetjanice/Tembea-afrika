@@ -36,3 +36,8 @@ def save_destination():
 def get_saved_destination():
     """Get users Saved destinations"""
     return PlacesController.get_saved_destination()
+
+@places.get("/destinations/booking")
+def get_booking_sites():
+    """Get booking sites route"""
+    return PlacesController.get_booking_sites()
