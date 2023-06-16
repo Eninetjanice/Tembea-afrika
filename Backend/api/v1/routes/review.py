@@ -1,13 +1,14 @@
 from flask import Blueprint
+from api.v1.controllers.review import ReviewController
 
-review = Blueprint("review", __name__, url_prefix="/")
-
-
-@review.post("/register", strict_slashes=False)
-def register():
-    return "User Created"
+review = Blueprint("review", __name__, url_prefix="/api/v1/review")
 
 
-@review.get("/me")
-def me():
-    return {"user": "me"}
+@review.post("/", strict_slashes=False)
+def add_review():
+    return ReviewController.add_review()
+
+
+@review.get("/")
+def get_review():
+    return ReviewController.get_review()

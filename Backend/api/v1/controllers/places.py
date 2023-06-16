@@ -28,3 +28,7 @@ class PlacesController:
     def get_saved_destination():
         """Get User Saved Destination"""
         return PlacesService.get_saved_destination()
+
+    @staticmethod
+    def get_booking_sites():
+        return PlacesService.get_booking_sites()

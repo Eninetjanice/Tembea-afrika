@@ -14,7 +14,7 @@ from api.v1.models.place import Place
 from api.v1.models import db
 from flask_jwt_extended import get_jwt_identity
 from api.v1.models.user import User
-import json
+from api.v1.constants.booking import bookings
 
 
 class PlacesService:
@@ -44,6 +44,7 @@ class PlacesService:
         """Get Destinations within country bbox"""
         country_code = request.args.get("country_code")
         coordinates = [c.bbox for c in country_subunits_by_iso_code(country_code)]
+        print(coordinates)
         return get_destination_by_bbox(coordinates[0])
 
     @staticmethod
@@ -95,4 +96,8 @@ class PlacesService:
             return jsonify({"data": []})
 
         print(places)
-        return jsonify(data= places)
+        return jsonify(data=places)
+
+    @staticmethod
+    def get_booking_sites():
+        return jsonify({"data": bookings}), HTTP_200_OK

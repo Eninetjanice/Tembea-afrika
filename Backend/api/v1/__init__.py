@@ -5,11 +5,13 @@ from api.v1.routes.review import review
 from api.v1.routes.places import places
 from api.v1.models import db
 from flask_jwt_extended import JWTManager
+from flask_cors import CORS
 
 
 def create_app(test_config=None):
     """Initialize app creation"""
     app = Flask(__name__, instance_relative_config=True)
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     if test_config is None:
         app.config.from_mapping(
