@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import DestinationAPI from '../api/DestinationAPI';
+import DestinationAPI from '../api/DestinationApi';
 
 const DestinationPage = () => {
   const { destinationId } = useParams();

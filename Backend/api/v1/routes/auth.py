@@ -1,18 +1,31 @@
 from flask import Blueprint
 from api.v1.models.user import User
 from api.v1.models import db
+from api.v1.controllers.auth import AuthController
+from flask_jwt_extended import jwt_required
 
-auth = Blueprint("auth", __name__, url_prefix="/auth")
+
+# Define Blueprint
+auth = Blueprint("auth", __name__, url_prefix="/api/v1/auth")
 
 
-@auth.get("/register", strict_slashes=False)
+@auth.post("/register", strict_slashes=False)
 def register():
-    new_user = User(email="adeyemo@tm30.net", username="adeyemo")
-    db.session.add(new_user)
-    db.session.commit()
-    return "User Created"
+    return AuthController.signup()
+
+
+@auth.post("/login")
+def login():
+    return AuthController.login()
 
 
 @auth.get("/me")
+@jwt_required()
 def me():
-    return {"user": "me"}
+    return AuthController.me()
+
+
+@auth.get("/token/refresh")
+@jwt_required(refresh=True)
+def refresh():
+    return AuthController.refresh()
