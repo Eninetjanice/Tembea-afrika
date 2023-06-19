@@ -41,16 +41,157 @@
             --dark: #145038;
         }
 
+        body {
+            /* color: #000; */
+            overflow-x: hidden;
+            height: 100%;
+            background-color: #d9e0da;
+            background-repeat: no-repeat;
+        }
+
+        .card0 {
+            box-shadow: 0px 4px 8px 0px #757575;
+            border-radius: 0px;
+        }
+
+        .card2 {
+            margin: 0px 40px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100px;
+            margin-top: 20px;
+            margin-left: 35px;
+        }
+
+        .image {
+            width: 360px;
+            height: 280px;
+        }
+
+        .border-line {
+            border-right: 1px solid #EEEEEE;
+        }
+
+        .line {
+            height: 1px;
+            width: 45%;
+            background-color: #E0E0E0;
+            margin-top: 10px;
+        }
+
+        .or {
+            width: 10%;
+            font-weight: bold;
+        }
+
+        .text-sm {
+            font-size: 14px !important;
+        }
+
+        ::placeholder {
+            color: #BDBDBD;
+            opacity: 1;
+            font-weight: 300
+        }
+
+        :-ms-input-placeholder {
+            color: #BDBDBD;
+            font-weight: 300
+        }
+
+        ::-ms-input-placeholder {
+            color: #BDBDBD;
+            font-weight: 300
+        }
+
+        input, textarea {
+            padding: 10px 12px 10px 12px;
+            border: 1px solid lightgrey;
+            border-radius: 2px;
+            margin-bottom: 5px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #2C3E50;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        input:focus, textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid var(--secondary);
+            outline-width: 0;
+        }
+
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0;
+        }
+
+        a {
+            color: var(--secondary);
+            cursor: pointer;
+        }
+
+        .btn-blue {
+            background-color: var(--dark);
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        .btn-blue:hover {
+            background-color: #145038;
+            cursor: pointer;
+        }
+
+        .bg-blue {
+            color: #fff;
+            background-color: #1A237E;
+        }
+
+        @media screen and (max-width: 991px) {
+            .logo {
+                margin-left: 0px;
+            }
+
+            .image {
+                width: 300px;
+                height: 220px;
+            }
+
+            .border-line {
+                border-right: none;
+            }
+
+            .card2 {
+                border-top: 1px solid #EEEEEE !important;
+                margin: 0px 15px;
+            }
+        }
+
         section {
-            /* border: ; */
-            width: 44%;
+            
+            width: auto;
             padding: 1.4rem 2rem;
             border: 1px solid rgba(245, 245, 245, 0.6);
             border-radius: 0.7rem;
             background-color: rgba(245, 245, 245, 0.07);
         }
 
-        input {
+        .footer {
+            background-color: var(--primary)
+        }
+
+        /* input [ type=text ], input [ type=password ] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
             outline: none;
             color: var(--light);
             font-size: 1.1rem;
@@ -85,7 +226,7 @@
         }
 
         /* username */
-        .username {
+        /*.username {
             width: 95%;
             margin-bottom: 1rem;
         }
@@ -144,7 +285,7 @@
             justify-content: center;
             align-items: center;
             padding: 0 3rem;
-            height: 100vh;
+            height: 80vh;
         }
 
         body {
@@ -156,10 +297,10 @@
                     0,
                     0.8);
             /* Replace with your desired dark background color */
-            background-image: url(./img/bg-hero.jpg);
+            /*background-image: url(./img/bg-hero.jpg);
             background-blend-mode: multiply;
             /* Adjust the blend mode to your preference */
-            background-size: cover;
+            /*background-size: cover;
         }
 
         .log {
@@ -167,7 +308,7 @@
             font-size: 2rem;
             font-weight: 600;
             margin: 1.7rem 0;
-        }
+        } */
     </style>
 </head>
 
@@ -201,7 +342,7 @@
 
     </div>
     <!-- Navbar & Hero End -->
-    <main>
+    <!--main>
         <section>
             <div class="log">Login</div>
             <div class="username">
@@ -217,18 +358,60 @@
                     </aside>
                 </div>
             </aside>
-
-            <div class="button" id="login"><button>Submit</button></div>
-
-            <div class="link">
-                Dont have an Account? <a href="signup.html">Sign Up</a>
-            </div>
         </section>
     </main>
     <!-- Main End -->
-
+    <main>
+        <section>
+            <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+                <div class="card card0 border-0">
+                    <div class="row d-flex">
+                        <div class="col-lg-6">
+                            <div class="card1 pb-5">
+                                <div class="row">
+                                    <img src="img/Logo-brown.ico" class="logo">
+                                </div>
+                                <div class="row px-3 justify-content-center mt-4 mb-5 border-line">
+                                    <img src="img/15.png" class="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card2 card border-0 px-4 py-5">
+                                <div class="row mb-4 px-3">
+                                    <h6 class="mb-0 mr-4 mt-2">Login</h6>
+                                </div>
+                                <div class="row px-3">
+                                    <label class="mb-1"><h6 class="mb-0 text-sm">Email Address</h6></label>
+                                    <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address">
+                                </div>
+                                <div class="row px-3">
+                                    <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
+                                    <input type="password" name="password" placeholder="Enter password">
+                                </div>
+                                <div class="row px-3 mb-4">
+                                    <!--div class="custom-control custom-checkbox custom-control-inline">
+                                        <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
+                                        <label for="chk1" class="custom-control-label text-sm">Remember me</label>
+                                    </div -->
+                                    <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+                                </div>
+                                <div class="row mb-3 px-3">
+                                    <button type="submit" class="btn btn-blue text-center">Submit</button>
+                                </div>
+                                <div class="row mb-4 px-3">
+                                    <small class="font-weight-bold">Don't have an account? <a href="signup.html">Sign Up</a></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+    </main>
+    
     <!-- Footer Start -->
-    <div class="container-fluid background-blend-mode text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid background-color text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
