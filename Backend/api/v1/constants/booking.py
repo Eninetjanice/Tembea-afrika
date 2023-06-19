@@ -8,14 +8,6 @@ bookings = [
         "url": "https://airbnb.com",
     },
     {
-        "name": "booking.com",
-        "url": "https://booking.com",
-    },
-    {
-        "name": "booking.com",
-        "url": "https://booking.com",
-    },
-    {
         "name": "expedia.com",
         "url": "https://expedia.com",
     },
