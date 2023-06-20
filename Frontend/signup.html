@@ -69,23 +69,24 @@
 
         /* Styles specific to desktop */
         @media only screen and (min-width: 768px) {
-        .container {
-            max-width: 800px;
-        }
+            .container {
+                max-width: 800px;
+            }
         }
 
         /* Styles specific to mobile */
         @media only screen and (max-width: 767px) {
-        .container {
-            padding: 10px;
+            .container {
+                padding: 10px;
+            }
         }
-        }
-        /* End of my additions */`````````````````````````````````````````
+
+        /* End of my additions */
 
         input {
             outline: none;
             color: var(--light);
-            font-size: 1.1rem;`````
+            font-size: 1.1rem;
             background-color: transparent;
         }
 
@@ -188,7 +189,7 @@
             margin: 2rem 0;
         }
 
-	/* responsive styles */
+        /* responsive styles */
         @media (max-width: 768px) {
             /*section {
                 padding: 2rem;
@@ -245,8 +246,8 @@
             }
         }
 
-	@media screen and (max-width: 480px) {
-           /* section {
+        @media screen and (max-width: 480px) {
+            /* section {
                 max-width: 100%;
                 padding: 1.5rem;
             }*/
@@ -306,8 +307,8 @@
             <div class="container">
                 <div class="log">Sign Up</div>
                 <div class="username">
-                    <label>Username <span>*</span></label><input type="text" placeholder="Enter your Username" id="username"
-                        required />
+                    <label>Username <span>*</span></label><input type="text" placeholder="Enter your Username"
+                        id="username" required />
                 </div>
                 <div class="username">
                     <label>Email <span>*</span></label><input type="email" placeholder="Enter your email" id="email"
@@ -317,7 +318,7 @@
                     <label>Password <span>*</span></label>
                     <div class="passwordDiv">
                         <input type="password" placeholder="Enter your password" id="password" required />
-                        <aside onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></aside>
+                        <aside onclick="togglePasswordVisibility1()"><i class="fa fa-eye"></i></aside>
                     </div>
                 </aside>
 
@@ -325,7 +326,7 @@
                     <label>Confirm Password <span>*</span></label>
                     <div class="passwordDiv">
                         <input type="password" placeholder="Confirm your password" id="c_password" required />
-                        <aside onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></aside>
+                        <aside onclick="togglePasswordVisibility2()"><i class="fa fa-eye"></i></aside>
                     </div>
                 </aside>
 
@@ -389,8 +390,10 @@
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Subscribe to our newsletter.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -469,12 +472,29 @@
             const { error, data } = await submitSignup();
             if (data) {
                 alert("Successful registration")
-                window.location.href = '/login.html'
+                window.location.href = './login.html'
                 window.reload()
             } else if (error) {
                 alert(error)
             }
         });
+
+        function togglePasswordVisibility1() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+        function togglePasswordVisibility2() {
+            var passwordField = document.getElementById("c_password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
 
         window.addEventListener("load", () => {
             const username = localStorage.getItem("username");
