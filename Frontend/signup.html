@@ -156,6 +156,75 @@
             font-weight: 600;
             margin: 2rem 0;
         }
+
+	/* responsive styles */
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem;
+                margin-top: 6rem;
+            }
+
+            .username input {
+                font-size: 0.9rem;
+            }
+
+            .passwordDiv input {
+                font-size: 0.9rem;
+            }
+
+            .loginBtn {
+                font-size: 1rem;
+                padding: 0.7rem;
+            }
+
+            .form-links a {
+                font-size: 0.8rem;
+            }
+
+            .errorMessage {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 1.5rem;
+                margin-top: 4rem;
+            }
+
+            .username input {
+                font-size: 0.85rem;
+            }
+
+            .passwordDiv input {
+                font-size: 0.85rem;
+            }
+
+            .loginBtn {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            .form-links a {
+                font-size: 0.75rem;
+            }
+
+            .errorMessage {
+                font-size: 0.75rem;
+            }
+        }
+
+	@media screen and (max-width: 480px) {
+            section {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -201,41 +270,43 @@
 
 
     <!-- Main Start-->
-    <main>
+    <main class="container text-center">
         <section>
             <div class="log">Sign Up</div>
-            <div class="username">
-                <label>Username <span>*</span></label><input type="text" placeholder="Enter your Username" id="username"
-                    required />
-            </div>
-            <div class="username">
-                <label>Email <span>*</span></label><input type="email" placeholder="Enter your email" id="email"
-                    required />
-            </div>
-            <aside>
-                <label>Password <span>*</span></label>
-                <div class="passwordDiv">
-                    <input type="password" placeholder="Enter your password" id="password" required />
-                    <aside onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></aside>
+            <div class="form-container">
+                <div class="username">
+                    <label>Username <span>*</span></label>
+                    <input type="text" placeholder="Enter your Username" id="username" required class="form-control">
                 </div>
-            </aside>
-
-            <aside style="margin-top: 1rem">
-                <label>Confirm Password <span>*</span></label>
-                <div class="passwordDiv">
-                    <input type="password" placeholder="Confirm your password" id="c_password" required />
-                    <aside onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></aside>
+                <div class="username">
+                    <label>Email <span>*</span></label>
+                    <input type="email" placeholder="Enter your email" id="email" required class="form-control">
                 </div>
-            </aside>
-
-            <div class="button"><button id="submit-signup">Submit</button></div>
-
-            <div class="link">
-                Already have an Account? <a href="login.html">Login</a>
+                <aside>
+                    <label>Password <span>*</span></label>
+                    <div class="passwordDiv">
+                        <input type="password" placeholder="Enter your password" id="password" required class="form-control">
+                        <aside class="toggle-password-visibility"><i class="fa fa-eye"></i></aside>
+                    </div>
+                </aside>
+                <aside style="margin-top: 1rem">
+                    <label>Confirm Password <span>*</span></label>
+                    <div class="passwordDiv">
+                        <input type="password" placeholder="Confirm your password" id="c_password" required class="form-control">
+                        <aside class="toggle-password-visibility"><i class="fa fa-eye"></i></aside>
+                    </div>
+                </aside>
+                <div class="button">
+                    <button id="submit-signup" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="link">
+                    Already have an Account? <a href="login.html">Login</a>
+                </div>
             </div>
         </section>
     </main>
     <!-- Main End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
