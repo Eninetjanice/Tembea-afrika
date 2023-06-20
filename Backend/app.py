@@ -127,7 +127,8 @@
 from api.v1 import create_app, db
 
 if __name__ == "__main__":
-    print("Correct")
-    db.create_all()
     create_app()
+    db.create_all()
+else:
+    app = create_app()
     # app.run(host="0.0.0.0", port=5000, debug=True, load_dotenv=True)

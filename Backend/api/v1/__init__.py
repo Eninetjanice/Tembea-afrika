@@ -6,6 +6,7 @@ from api.v1.routes.places import places
 from api.v1.models import db
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 
 def create_app(test_config=None):
@@ -13,6 +14,7 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+    load_dotenv('.env')
     if test_config is None:
         app.config.from_mapping(
             SECRET_KEY=os.environ.get("SECRET_KEY"),
