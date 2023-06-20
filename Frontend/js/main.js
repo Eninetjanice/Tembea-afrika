@@ -86,7 +86,7 @@
   });
 })(jQuery);
 
-const baseURL = "https://tembeafrika.onrender.com";
+const baseURL = "https://tembea-afrika-backend.onrender.com/api/v1";
 async function fetchDestinations(countryCode) {
   console.log(countryCode);
   const response = await fetch(
