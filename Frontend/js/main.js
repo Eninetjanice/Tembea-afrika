@@ -86,7 +86,7 @@
   });
 })(jQuery);
 
-const baseURL = "http://localhost:5000/api/v1";
+const baseURL = "https://tembeafrika.onrender.com";
 async function fetchDestinations(countryCode) {
   console.log(countryCode);
   const response = await fetch(
