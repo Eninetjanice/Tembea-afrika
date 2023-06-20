@@ -156,6 +156,75 @@
             font-weight: 600;
             margin: 2rem 0;
         }
+
+	/* responsive styles */
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem;
+                margin-top: 6rem;
+            }
+
+            .username input {
+                font-size: 0.9rem;
+            }
+
+            .passwordDiv input {
+                font-size: 0.9rem;
+            }
+
+            .loginBtn {
+                font-size: 1rem;
+                padding: 0.7rem;
+            }
+
+            .form-links a {
+                font-size: 0.8rem;
+            }
+
+            .errorMessage {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 1.5rem;
+                margin-top: 4rem;
+            }
+
+            .username input {
+                font-size: 0.85rem;
+            }
+
+            .passwordDiv input {
+                font-size: 0.85rem;
+            }
+
+            .loginBtn {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            .form-links a {
+                font-size: 0.75rem;
+            }
+
+            .errorMessage {
+                font-size: 0.75rem;
+            }
+        }
+
+	@media screen and (max-width: 480px) {
+            section {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
