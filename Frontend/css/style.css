@@ -255,6 +255,7 @@
 /*** Package ***/
 .package-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    background-color: #fff;
 }
 
 .package-item img {
@@ -447,18 +448,21 @@
 }
 
 /* Modal Styles */
-.modal {
+#myModal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
+  .modal-description {
+    color: #A06131;
+  }
+
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -467,12 +471,12 @@
     width: 80%;
     max-width: 500px;
   }
-  
+
   .sub-modal-content{
       display: flex;
       justify-content: space-between;
   }
-  
+
   .close {
     color: #aaa;
     float: right;
@@ -480,10 +484,16 @@
     font-weight: bold;
     cursor: pointer;
   }
-  
+
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .modal-city,
+  .modal-state,
+  .modal-country {
+    color: #A06131;
   }
