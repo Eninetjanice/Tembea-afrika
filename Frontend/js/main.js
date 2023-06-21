@@ -169,8 +169,6 @@ destinations.addEventListener("click", async (e) => {
     btn.onclick = async function (e) {
       const id = e.target.getAttribute("data-id");
       const { data } = await fetchSingleDestinations(id);
-      console.log(data);
-      console.log(id);
       modal.style.display = "block";
 
       let starText = "";
@@ -178,34 +176,33 @@ destinations.addEventListener("click", async (e) => {
         starText += `<small class="fa fa-star text-primary"></small>`;
       }
       modal.innerHTML = `
-      <div class="modal-content">
+      <div class="modal-content" style="background-color:black; color: black; !important">
       <div class="sub-modal-content">
-        
-        
         <span class="close">&times;</span>
       </div>
       <div class="col-lg-12 col-md-10 wow fadeInUp" data-wow-delay="0.1s">
         <div class="package-item">
-    
-            <div class="d-flex border-bottom">
-                <small class="flex-fill text-center border-end py-2 modal-city" >${data.address.city}</small>
-                <small class="flex-fill text-center border-end py-2 modal-state">${data.address.state}</small>
-                <small class="flex-fill text-center py-2 modal-country">${data.address.country}</small>
+          <div class="d-flex border-bottom">
+            <small class="flex-fill text-center border-end py-2 modal-city">${data.address.city}</small>
+            <small class="flex-fill text-center border-end py-2 modal-state">${data.address.state}</small>
+            <small class="flex-fill text-center py-2 modal-country">${data.address.country}</small>
+          </div>
+          <div class="text-center p-4">
+            <h3 class="mb-0">${data.name}</h3>
+            <div class="mb-3">
+              ${starText}
             </div>
-            <div class="text-center p-4">
-                <h3 class="mb-0">${data.name}</h3>
-                <div class="mb-3">
-                    ${starText}
-                </div>
-                <p class="modal-description">${data.wikipedia_extracts.text}</p>
-                <div class="d-flex justify-content-center mb-2">
-                    <a href="#" class="btn btn-sm btn-primary px-3 modal-review border-end" style="border-radius: 30px 0 0 30px;">Reviews</a>
-                    <a href="/booking.html" class="btn btn-sm btn-primary px-3 modal-book" style="border-radius: 0 30px 30px 0;">Book Now</a>
-                </div>
+            <p class="modal-description">${data.wikipedia_extracts.text}</p>
+            <div class="d-flex justify-content-center mb-2">
+              <!-- <a href="#" class="btn btn-sm btn-primary px-3 modal-review border-end"
+                style="border-radius: 30px 0 0 30px;">Reviews</a> -->
+              <a href="./booking.html" class="btn btn-sm btn-primary px-3 modal-book"
+                style="border-radius: 30px;">Book Now</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-        
       `;
     };
   });

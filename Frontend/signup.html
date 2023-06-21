@@ -289,7 +289,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destination</a>
                         <div class="dropdown-menu m-0">
                             <a href="destination.html" class="dropdown-item">Search</a>
-                            <a href="booking.html" class="dropdown-item">Reviews</a>
+                            <a href="booking.html" class="dropdown-item">Booking</a>
                         </div>
                     </div>
                 </div>
@@ -436,6 +436,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         async function submitSignup() {
             const username = document.getElementById("username").value;
@@ -448,7 +449,11 @@
 
             }
             if (password !== c_password) {
-                alert("Password does not match!");
+                swal({
+                    title: "Error!",
+                    text: "Password does not match!",
+                    icon: "error",
+                });
             }
 
             const response = await fetch(`${baseURL}/auth/register`, {
@@ -471,11 +476,11 @@
         submitSignupBtn.addEventListener("click", async () => {
             const { error, data } = await submitSignup();
             if (data) {
-                alert("Successful registration")
+                await swal("Success", "Successful registration...", "success")
                 window.location.href = './login.html'
                 window.reload()
             } else if (error) {
-                alert(error)
+                swal("Error!", error, 'error')
             }
         });
 
@@ -498,7 +503,6 @@
 
         window.addEventListener("load", () => {
             const username = localStorage.getItem("username");
-            console.log("got here");
             if (username) {
                 const registerBtn = document.getElementById("major-check");
 
